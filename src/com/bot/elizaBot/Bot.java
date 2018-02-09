@@ -1,5 +1,7 @@
 package com.bot.elizaBot;
 
+import java.util.Scanner;
+
 public class Bot {
     private Saudacao _saudacao;
     private Despedida _despedida;
@@ -7,9 +9,20 @@ public class Bot {
     private boolean _fimDialogo;
 
     public Bot(){
-        _saudacao = new Saudacao();
-        _despedida = new Despedida();
-        _conversa = new Conversa();
+        //_saudacao = new Saudacao();
+        //_despedida = new Despedida();
+        //_conversa = new Conversa();
+
+        System.out.println("Olá, eu me chamo Eliza. Sou a assistente virtual da UFRN, e estou a disposição 24h para te " +
+                "ajudar. Clique no endereço abaixo para entender melhor como podemos nos comunicar. Ou digite \"#ajuda\". ");
+
+        // espera
+        // if contato recebido, inicia conversa
+        Scanner reader = new Scanner(System.in);
+        if (reader.hasNextLine()){
+            _conversa = new Conversa(reader.nextLine());
+        }
+
     }
 
     public String dialogo(String respostaAluno){
