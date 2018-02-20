@@ -1,0 +1,3 @@
+quando é minha proxima aula?
+quando é minha próxima aula de <disciplina>?
+qual é a minha proxima aula?
